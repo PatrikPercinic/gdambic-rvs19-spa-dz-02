@@ -33,7 +33,7 @@ void Text::draw(unsigned long int ukupanBroj)
 	ss << "Ukupan broj promjena: ";
 	ss << ukupanBroj;
 	text.setString(ss.str());
-	text2.setString("WASD za pomicanje, +/- za zoom, r za resetiranje pozicije.");
+	text2.setString("WASD za pomicanje, +/- za zoom, r za resetiranje pozicije, drzite f za ugasit fps limit.");
 	text3.setString("Patrik Percinic 1RP2");
 
 	text.setCharacterSize(30); 

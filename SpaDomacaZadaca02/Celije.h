@@ -13,6 +13,7 @@ private:
 	vector<vector<bool>> alive;
 	sf::Vector2f zeljenaVelicina;
 	float skala = 1;
+	bool limit = true;
 	unsigned long int ukupanBroj = 0;
 	static const unsigned int STUPACA = 180;
 	static const unsigned int REDAKA = 320;

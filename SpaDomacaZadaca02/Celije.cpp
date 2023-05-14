@@ -1,4 +1,12 @@
 #include "Celije.h"
+#include <chrono>
+#include <thread>
+
+	using namespace std::this_thread;     // sleep_for, sleep_until
+	using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+	using std::chrono::system_clock;
+
+
 
 Celije::Celije(sf::RenderWindow* window)
 {
@@ -73,6 +81,15 @@ void Celije::draw()
 		sprite.setPosition(0, 0);
 		skala = 1;
 	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+	{
+		limit = false;
+	}
+	if (limit)
+	{
+		sleep_until(system_clock::now() + 2s);
+	}
+	
 
 	window->draw(sprite);
 	life.step();
