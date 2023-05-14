@@ -1,11 +1,15 @@
 #include <SFML/Graphics.hpp>
+#include "Celije.h"
+#include "Life.h"
+#include "Testiranje.h"
+#include "Text.h"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Hello, SFML world!");
+	sf::RenderWindow window(sf::VideoMode(1600, 1000), "Patrik Percinic GameOfLife", sf::Style::Default);
 	window.setFramerateLimit(60);
-	//Cvijet cvijet(&window);
-
+	Celije celija(&window);
+	Text text(&window);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -16,7 +20,7 @@ int main()
 		}
 
 		window.clear();
-		//cvijet.draw();
+		celija.draw();
 		window.display();
 	}
 
